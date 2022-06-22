@@ -1,0 +1,131 @@
+body, input {
+    font-family: "Segoe UI", Roboto,"Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none;
+}
+
+/*
+    dashboard and components
+*/
+.dashboard {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    /*gap: .5em;*/
+    margin: 1em 0.5em;
+    height: 400px;
+}
+
+    /* no borders around Wijmo controls */
+    .dashboard .wj-control {
+        border: none;
+    }
+
+/* limit grid height */
+.wj-flexgrid {
+    max-height: 400px;
+}
+
+/* extra padding, no border on cells */
+.wj-flexgrid .wj-cell {
+    padding: 8px;
+    border: none;
+}
+
+/* highlight cells when hovering */
+.wj-flexgrid .wj-cells .wj-row:hover .wj-cell:not(.wj-state-selected):not(.wj-state-multi-selected) {
+    background: #80adbf20;
+}
+
+/* chart title */
+.wj-flexchart .wj-header .wj-title {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/* selected chart elements */
+.wj-flexchart .wj-state-selected {
+    stroke: rgba(0,0,100,.5);
+    stroke-width: 4;
+}
+
+/* Wijmo tooltips (on chart elements) */
+.wj-tooltip {
+    padding: 12px;
+    text-align: center;
+}
+
+/* 
+    Weavy popups 
+*/
+
+.popup-weavy {
+    width: 400px;
+    height: 300px;
+    /*padding: .5em;*/
+}
+
+.popup-weavy.large {
+    height: 600px;
+}
+
+.btn-weavy {
+    background: transparent;
+    border-color: rgba(0,0,0,.2);
+    border-width: 2px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.btn-weavy:hover {
+    background: rgba(0,0,0,.2);
+}
+
+/* 
+    auth button/tooltip 
+*/
+#auth-btn {
+    position: absolute;
+    top: 1em;
+    right: 6px;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+#auth-btn:hover {
+    background-color: #286090;
+}
+
+.auth-tip.wj-tooltip {
+    text-align: right;
+    background: #fffacf;
+    border-radius: 1em;
+}
+
+.auth-tip.wj-tooltip .e-mail {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+    max-width: 12em;
+    font-size: 70%;
+    font-style: italic;
+}
+

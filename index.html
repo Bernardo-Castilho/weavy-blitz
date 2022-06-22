@@ -1,0 +1,75 @@
+<div class="container">
+
+	<h1>
+		Wijmo Dashboard with Weavy
+	</h1>
+
+  <p>
+    This app shows how you can use
+    <a href="https://www.weavy.com" target="_blank">Weavy</a>
+    to add contextual collaboration features such as
+    activity feeds, document sharing, and chats to
+    <a href="https://www.grapecity.com/wijmo" target="_blank">Wijmo</a>
+    applications.
+  </p>
+  <p>
+    In this case, the app is a simple dashboard that shows
+    sales data stored in a Google Sheet. Users may sort and
+    filter the data, and the chart is updated automatically.
+  </p>
+  <p>
+    This app was created to help you get started in the
+    <a href="https://www.weavy.com/hackathonwijmo" target="_blank">Weavy/Wijmo Hackathon</a>.
+  </div>
+
+  <!-- Weavy buttons -->
+  <p id="weavy-btns" class="hidden">
+    Use these buttons to interact with other users:
+    <span class="no-wrap">
+      <button 
+        id="btnFeed"
+        class="btn-weavy"
+        title="News Feed (disabled for now)"
+        disabled>
+        &#x1F4F0;
+      </button>
+      <button
+        id="btnDocs"
+        class="btn-weavy"
+        title="Document Sharing (disabled for now)"
+        disabled>
+        &#x1F4C1;
+      </button>
+      <button
+        id="btnChat"
+        class="btn-weavy"
+        title="Chat">
+        &#x1f4ac;
+      </button>
+    </span>
+  </p>
+  <p id="no-weavy-btns">
+    Please click the sign in button to enable Weavy's
+    collaboration features.
+  </p>
+
+  <!-- Our simple dashboard app -->
+  <div class="dashboard">
+	  <div id="theGrid"></div>
+    <div id="theChart"></div>
+  </div>
+
+  <!-- sign in/out button -->
+  <button id="auth-btn">
+    Sign In
+  </button>
+
+  <!-- Weavy popups -->
+  <div class="hidden">
+    <div id="theFeed" class="popup-weavy"></div>
+    <div id="theDocs" class="popup-weavy large"></div>
+    <div id="theChat" class="popup-weavy"></div>
+  </div>
+
+</div>
+
